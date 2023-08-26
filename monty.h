@@ -76,6 +76,7 @@ char *_strtok(char *str, char *d);
 void _pall(stack_t **h, unsigned int nline);
 void _pint(stack_t **h, unsigned int nline);
 void _pop(stack_t **h, unsigned int nline);
+void _swap(stack_t **h, unsigned int nline);
 
 
 #endif

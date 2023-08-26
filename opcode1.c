@@ -92,3 +92,31 @@ void _pop(stack_t **h, unsigned int nline)
 	*h = (*h)->next;
 	free(temp);
 }
+
+/**
+ * _swap - swaps the top two elements of the stack.
+ * @h: head of the linked list
+ * @nline: line numbers
+ * Return: no return
+ */
+void _swap(stack_t **h, unsigned int nline)
+{
+	int count = 0;
+	stack_t *temp = NULL;
+
+	temp = *h;
+	for (; temp != NULL; temp = temp->next)
+		count++;
+	if (count < 2)
+	{
+		dprintf(2, "L%u: can't swap, stack too short\n", nline);
+		free_vg;
+		exit(EXIT_FAILURE);
+	}
+	temp = *h;
+	*h = (*h)->next;
+	temp->next = (*h)->next;
+	temp->prev = *h;
+	(*h)->next = temp;
+	(*h)->prev = NULL;
+}

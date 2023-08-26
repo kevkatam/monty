@@ -23,3 +23,15 @@ void _add(stack_t **h, unsigned int nline)
 	temp->n += (*h)->n;
 	_pop(h, nline);
 }
+
+/**
+ * _nop - doesn’t do anything.
+ * @h: head of the list
+ * @nline: line number
+ * Return: no return
+ */
+void _nop(stack_t **h, unsigned int nline)
+{
+	(void)h;
+	(void)nline;
+}

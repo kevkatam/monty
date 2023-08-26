@@ -102,7 +102,7 @@ void _pop(stack_t **h, unsigned int nline)
 void _swap(stack_t **h, unsigned int nline)
 {
 	int count = 0;
-	stack_t *temp = NULL;
+	stack_t *temp;
 
 	temp = *h;
 	for (; temp != NULL; temp = temp->next, count++)

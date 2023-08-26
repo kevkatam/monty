@@ -53,3 +53,22 @@ void _pall(stack_t **h, unsigned int nline)
 		temp = temp->next;
 	}
 }
+/**
+ * _pint -  prints the value at the top of the stack, followed by a new line.
+ * @h: head of the linked list
+ * @nline: line numbers
+ * Return: no return
+ */
+void _pint(stack_t **h, unsigned int nline)
+{
+	(void)nline;
+
+	if (*h == NULL)
+	{
+		dprintf(2, "L%u: ", nline);
+		dprintf(2, "can't pint, stack empty\n");
+		free_vg();
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*h)->n);
+}

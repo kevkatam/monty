@@ -72,3 +72,23 @@ void _pint(stack_t **h, unsigned int nline)
 	}
 	printf("%d\n", (*h)->n);
 }
+/**
+ * _pop -  removes the top element of the stack.
+ * @h: head of the linked list
+ * @nline: line numbers
+ * Return: no return
+ */
+void _pop(stack_t **h, unsigned int nline)
+{
+	stack_t *temp;
+
+	if (h == NULL || *h == NULL)
+	{
+		dprintf(2, "L%u: can't pop an empty stack\n", nline);
+		free_vg();
+		exit(EXIT_FAILURE);
+	}
+	temp = *h;
+	*h = (*h)->next;
+	free(temp);
+}

@@ -105,8 +105,8 @@ void _swap(stack_t **h, unsigned int nline)
 	stack_t *temp = NULL;
 
 	temp = *h;
-	for (; temp != NULL; temp = temp->next)
-		count++;
+	for (; temp != NULL; temp = temp->next, count++)
+		;
 	if (count < 2)
 	{
 		dprintf(2, "L%u: can't swap, stack too short\n", nline);

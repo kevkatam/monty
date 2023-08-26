@@ -79,6 +79,7 @@ void _pop(stack_t **h, unsigned int nline);
 void _swap(stack_t **h, unsigned int nline);
 void _add(stack_t **h, unsigned int nline);
 void _nop(stack_t **h, unsigned int nline);
+void _sub(stack_t **h, unsigned int nline);
 
 
 #endif

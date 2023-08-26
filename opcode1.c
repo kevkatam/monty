@@ -33,3 +33,23 @@ void _push(stack_t **h, unsigned int nline)
 	else
 		add_dnodeint_end(h, i);
 }
+
+/**
+ * _pall - prints all the values on the stack, starting from the
+ *  top of the stack.
+ *  @h: head of the linked list
+ *  @nline: line numbers
+ *  Return: no return
+ */
+void _pall(stack_t **h, unsigned int nline)
+{
+	stack_t *temp;
+	(void)nline;
+
+	temp = *h;
+	while (temp)
+	{
+		printf("%d\n", temp->n);
+		temp = temp->next;
+	}
+}

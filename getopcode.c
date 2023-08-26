@@ -10,6 +10,7 @@ void (*getopcodes(char *op))(stack_t **stack, unsigned int line_number)
 {
 	instruction_t instruct[] = {
 		{"push", _push},
+		{"pall", _pall},
 		{NULL, NULL}
 	};
 	int i;

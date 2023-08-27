@@ -53,7 +53,7 @@ void _sub(stack_t **h, unsigned int nline)
 		;
 	if (count < 2)
 	{
-		dprintf(2, "L%u: can't sub, stack too short", nline);
+		dprintf(2, "L%u: can't sub, stack too short\n", nline);
 		free_vg();
 		exit(EXIT_FAILURE);
 	}

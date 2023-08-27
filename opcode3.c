@@ -17,7 +17,7 @@ void _mul(stack_t **h, unsigned int nline)
 	if (count < 2)
 	{
 		dprintf(2, "L%u: can't mul, stack too short\n", nline);
-		free_vg;
+		free_vg();
 		exit(EXIT_FAILURE);
 	}
 	temp = (*h)->next;
